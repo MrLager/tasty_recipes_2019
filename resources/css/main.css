@@ -1,0 +1,379 @@
+/* copyright note: all fonts used in this project are allowed to be used for free in non-commercial works */
+@font-face { font-family: Photographs; src: url('../fonts/Photographs.ttf'); } 
+@font-face { font-family: SIMPLIFICA Typeface; src: url('../fonts/SIMPLIFICA\ Typeface.ttf'); } 
+
+
+/* project colors accesed by "var(--varname)" */
+:root {
+    --black:#000000;
+    --red:#d64933; 
+    /* --red:#000000; */
+    --grey:#7c7c7c;
+    --blue:#92dce5;
+    --platinum:#EEE5e9;
+    --beige:#fbfbf0;
+    --green:#90EE90;
+}
+body{
+    background-color: #F0F0F0;
+}
+
+/* everything including content footer not nav */
+#container{
+    /* background-color: #F0F0F0; */
+    position: relative;
+    min-height: 100vh;
+   
+}
+
+/* only the page content, not footer and nav */
+article{
+    background-color: white;
+    /* height: 100%; */
+    padding-bottom: 2.5rem;
+}
+
+/* all content including not footer and nav */
+#content{
+    /* height: 100%; */
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top:63px;
+ 
+}
+
+.header {
+    position: fixed;
+    display: block; 
+    top: 0; 
+    width: 90%;
+
+    transition: top 0.3s; 
+    background-color: #D64933;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+
+.clear{
+    clear: both;
+}
+
+
+.header ul{
+    float: right;
+    margin: 0;
+  
+}
+.header ul li{
+    float: left;
+    margin-left: 50px;
+    list-style: none;
+}
+
+.header ul .nav_links{
+    padding-top: 15px;
+    font-family: SIMPLIFICA Typeface;
+    font-size: 30px;
+}
+
+.header ul .login_button{
+    height: 100%;
+}
+  
+.header ul li a {
+    color: white;
+    text-decoration: none;
+} 
+
+.header a:hover{
+    color: var(--blue);
+}
+
+#selected{
+    color: #000000;
+}
+
+#recipe_invisible:hover ~ .header #recipes{
+    color: black;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+article{
+    padding-left: 5%;
+    padding-top: 5px;
+}
+
+.header h1{
+    float: left;
+    font-family: Photographs; /*crappy rendering in chrome, investigate further*/
+    font-size: 40px;
+    padding: 10px;
+    width: 160px;
+    letter-spacing: 2px;
+}
+
+
+#dropdown_menu{
+    height: 210px;
+    /* display: block; */
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    /* padding: 10px */
+    
+}
+
+/* #dropdown_menu ul::-webkit-scrollbar {
+    display: none;
+  } */
+
+#dropdown_menu img {
+    height: 160px;
+    width: 160px;
+}
+
+
+#dropdown_menu img:hover {
+    opacity: 0.5;
+}
+
+#dropdown_menu li {
+    padding: 10px;
+    flex: auto;
+    /* overflow-x: auto; */
+     /* float: left; */
+    /*list-style-type: none; */
+   
+}
+
+#dropdown_menu ul {
+    padding: 10px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+
+     /* float: left; */
+    /*list-style-type: none; */
+   
+}
+.recipes:hover ~ #dropdown_menu{
+    display: block;
+}
+/* get the black indication to stay when hovering out on the drop down menu */
+
+
+#recipe_invisible:hover ~ #dropdown_invisible{
+    display: block;
+}
+
+#dropdown_menu:hover{
+    display: block;
+}
+
+#dropdown_menu:hover ~ #dropdown_menu{
+    display: block;
+}
+
+#dropdown_menu:hover ~ .header #recipes{
+    color: black;
+}
+
+/* #dropdown_menu:hover{
+    display: block;
+} */
+
+/* styling for calender bellow */
+.weekdays li{
+    display: inline-block; /*sets the elements to the side of each other.*/
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#recipe_invisible{
+    display: block;
+    background-color: white;
+    /* visibility: hidden;  */
+    height: 45px;
+    width: 75px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    margin-right: 11%;
+}
+
+/* calender styling */
+table,tr,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+tr,th{
+    height: 60px;
+    width: 60px;
+    background-color: white;
+}
+
+table {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+
+
+footer{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+}
+
+#logg_in_form{
+    width: 50%;
+    background-color: white;
+    color: black;
+    height: 50%;
+    top: 25%;
+    right: 25%;
+    position: fixed;
+    z-index: 2;
+    border: 2px solid black;
+    box-shadow: 5px 5px grey;
+}
+
+#logg_in:hover {
+    background-color: #fff;
+}
+#register_btn:hover {
+    background-color: #fff
+}
+#close_logg_in{
+    border: none; 
+    background:lightcoral;
+    color: white;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    float: right;
+    margin: 5px;
+}
+
+.error{
+    color: red;
+}
+/* mobile friendly stuff */
+.menu_icon{
+    display: none;
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    padding: 10.5px;
+}
+
+.menu_icon_line{
+    background-color: white;
+    height: 5px;
+    width: 35px;
+    margin-left: 4px;
+    margin-top: 6px;
+}
+
+#logg_in{
+    border: none;
+    margin: 16px;
+    padding: 8px;
+    vertical-align: middle;
+    float: left;
+    background-color: var(--blue);
+    border-radius: 3px;
+    border: 1px solid #000000;
+}
+
+#register_btn{
+    border: none;
+    margin: 16px;
+    padding: 8px;
+    /* vertical-align: middle; */
+    float: left;
+    background-color: var(--green);
+    border-radius: 3px;
+    border: 1px solid #000000;
+}
+#register_form{
+    /* vertical-align: middle; */
+    float: left;
+   
+}
+
+.tab {
+    padding-left: 2em;
+}
+
+.comment_section{
+    border: 1px solid black;
+    border-collapse: collapse;
+    position:relative;
+    background-color:var(--blue);
+    margin-top: 15px;
+    width: 800px; /*temporery, remove later and add real margin*/
+}
+
+.comment_section button{
+    float: right;/*use the same styleing as the close loggin for style*/
+    color: red;
+    margin-right: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    border-left: 1px solid black;
+    background-color: var(--platinum);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px){
+    /* center the logo */
+    .header h1 {
+        /* background-color: green; */
+        position: relative;
+        width: 60%;
+        left: 20%;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    /* remove desktop navigation */
+    .header ul{
+        display: none;
+    }
+    /* #recipe_invisible{
+        display: none;
+    } */
+
+    /* add nav icon for mobile */
+    .menu_icon{
+        display: block;
+    }
+
+    #dropdown_menu{
+        height: 100%;
+        display: block;
+    }
+}
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cookbook version="46">
+    <recipe>
+        <title>Pancakes (example do not cook this) </title>
+        <preptime>15 min</preptime>
+        <cooktime>20 min</cooktime>
+        <totaltime>35 min</totaltime>
+        <description>
+            <li>Desc 1</li>
+            <li>Desc 2</li>
+        </description>
+        <ingredient>
+            <li>1 and 0.5 cups all-purpose flour</li>
+            <li>3 and 0.5 teaspoons baking powder</li>
+            <li>1 teaspoon salt</li>
+            <li>1 tablespoon white sugar</li>
+            <li>1 egg</li>
+            <li>1 1/4 cups milk</li>
+        </ingredient>
+        <recipetext>
+            <li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center</li>
+            <li>and pour in the milk, egg and melted butter; mix until smooth.</li>
+            <li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto</li>
+            <li>the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+        </recipetext>
+        <url>http://www.recipeurl</url>
+        <video>http://www.videourl</video>
+        <quantity>4</quantity>
+        <imagepath>../../resources/images/pancake.jpeg</imagepath>
+        <imageurl>http://www.recipeurl/original_image</imageurl>
+        <comments>Your comments</comments>
+        <source>Source</source>
+        <video>Video URL</video>
+        <nutrition>
+            <li>Nutritional information</li>
+            <li></li>
+        </nutrition>
+        <rating>5</rating>
+        <category>category 1</category>
+        <category>category 2</category>
+    </recipe>
+</cookbook>

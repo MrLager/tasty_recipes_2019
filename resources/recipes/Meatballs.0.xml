@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cookbook version="46">
+    <recipe>
+        <title>Meatballs (example do not cook this)</title>
+        <preptime>15 min</preptime>
+        <cooktime>20 min</cooktime>
+        <totaltime>35 min</totaltime>
+        <description>
+            <li>Desc 1</li>
+            <li>Desc 2</li>
+        </description>
+        <ingredient>
+            <li>500 g köttfärs</li>
+            <li>0.5 dl ströbröd</li>
+            <li>matlagningsgrädde</li>
+            <li>1 ägg</li>
+            <li>2 msk smör</li>
+        </ingredient>
+        <recipetext>
+            <li>Mix breadcrumbs and cream. Let sit for 10 min. </li>
+            <li>Add minced meat, onion, egg, salt and pepper. Stir until you get an even mixture.</li>
+            <li>Fry in butter on medium heat for 3-5 minutes.</li>
+            <li>Peel the potatoes and cut in pieces. Cook until the potato is soft for 10-15 minutes. Discard the cooking water and press the potato.</li>
+            <li>Heat the milk and the cream and add to the potato. Season with salt and pepper. Stir until fluffy.</li>
+            <li>Serve the meatballs with the mashed potatoes and pickled cucumber.</li>
+        </recipetext>
+        <url>http://www.recipeurl</url>
+        <video>http://www.videourl</video>
+        <quantity>4</quantity>
+        <imagepath>../../resources/images/meatballs.jpg</imagepath>
+        <imageurl>http://www.recipeurl/original_image</imageurl>
+        <comments>Your comments</comments>
+        <source>Source</source>
+        <video>Video URL</video>
+        <nutrition>
+            <li>Nutritional information</li>
+            <li></li>
+        </nutrition>
+        <rating>5</rating>
+        <category>category 1</category>
+        <category>category 2</category>
+    </recipe>
+</cookbook>
