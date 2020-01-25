@@ -7,7 +7,7 @@ use Chat\Controller\Controller;
 use Chat\Util\Constants;
 
 /**
- * This class stores the user user name
+ * This class deletes comments
  *
  * @author Simon Lagerqvist, simlag@kth.se
  */
@@ -23,7 +23,7 @@ class DeleteComment extends AbstractRequestHandler {
     protected function doExecute() {
       
         
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
         $contr->delete_comment($this->commentId);
         //$this->addVariable(Constants::CHAT_ENTRIES_VAR, $contr->getConversation(TRUE));
         // $this->addVariable(Constants::CHAT_USERNAME_VAR, $contr->getUsername());

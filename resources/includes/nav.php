@@ -15,7 +15,7 @@
         <!-- <button id="register_btn" action="RegisterPage">Register</button> -->
         <!-- </form> -->
         <?php
-            if($this->session->get('CHAT_CONTR_KEY')->get_user_login_status())
+            if($this->session->get('TASTY_CONTR_KEY')->get_user_login_status())
             {        
                 // echo
                 // '<form action="logout" method="post"> 

@@ -3,7 +3,7 @@
 namespace TastyRecipes\View;
 use Id1354fw\View\AbstractRequestHandler;
 
-/*returns the index page of the webbaplication*/
+/*is used to register to the page*/
 class RegisterEntered extends AbstractRequestHandler{
     private $userName;
     private $pass;
@@ -23,7 +23,7 @@ class RegisterEntered extends AbstractRequestHandler{
 
     protected function doExecute() {
       
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
 
         if(!$contr->register_user($this->userName, $this->pass, $this->email))
         {

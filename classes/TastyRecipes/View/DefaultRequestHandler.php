@@ -13,7 +13,7 @@ class DefaultRequestHandler extends AbstractRequestHandler{
 
     protected function doExecute() {
         $this->session->restart();
-        $this->session->set('CHAT_CONTR_KEY', new Controller());
+        $this->session->set('TASTY_CONTR_KEY', new Controller());
         \header('Location: /tasty/TastyRecipes/View/IndexPage');
     }
 }

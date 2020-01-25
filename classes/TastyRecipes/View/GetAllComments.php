@@ -7,7 +7,7 @@ use Chat\Controller\Controller;
 use Chat\Util\Constants;
 
 /**
- * This class stores the user user name
+ * This class will get all comments given a spcific recipe id
  *
  * @author Simon Lagerqvist, simlag@kth.se
  */
@@ -22,7 +22,7 @@ class GetAllComments extends AbstractRequestHandler {
 
     protected function doExecute() {
       
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
         $comments = $contr->get_all_comments($this->dishId);
         
         $this->addVariable('jsonData', $comments);

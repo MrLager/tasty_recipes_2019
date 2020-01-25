@@ -3,7 +3,7 @@
 namespace TastyRecipes\View;
 use Id1354fw\View\AbstractRequestHandler;
 
-/*returns the index page of the webbaplication*/
+/*returns the recipe page of the webbaplication*/
 class RecipePage extends AbstractRequestHandler{
     private $recipe_id;
 
@@ -13,7 +13,7 @@ class RecipePage extends AbstractRequestHandler{
 
     
     protected function doExecute() {
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
         $recipe = $contr->get_recipe($this->recipe_id);
         $this->addVariable('Headline', $recipe->Headline);
         $this->addVariable('Ingridients', $recipe->Ingridients);

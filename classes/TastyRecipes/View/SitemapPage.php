@@ -7,7 +7,7 @@ use Chat\Controller\Controller;
 use Chat\Util\Constants;
 
 /**
- * This class stores the user user name
+ * This class returns the site map page
  *
  * @author Simon Lagerqvist, simlag@kth.se
  */

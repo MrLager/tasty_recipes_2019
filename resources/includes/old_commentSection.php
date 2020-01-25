@@ -1,5 +1,5 @@
 <?php
-  if($this->session->get('CHAT_CONTR_KEY')->get_user_login_status())
+  if($this->session->get('TASTY_CONTR_KEY')->get_user_login_status())
   {    
     echo '<form action="PostComment" method="post" id="comment_form">
       <input type="text" name="comment" value="write your comment here!">
@@ -9,7 +9,7 @@
   }
 
   // echo $row_all_comments;
-  $row_all_comments = $this->session->get('CHAT_CONTR_KEY')->get_all_comments(0);
+  $row_all_comments = $this->session->get('TASTY_CONTR_KEY')->get_all_comments(0);
 
   foreach ($row_all_comments as &$row)
   {
@@ -19,7 +19,7 @@
     // $USERNAME_q_response = @mysqli_query($dbc, $USERNAME_q);
   
     // $row_USERNAME_q = mysqli_fetch_assoc($USERNAME_q_response);
-    $row_USERNAME_q = $this->session->get('CHAT_CONTR_KEY')->get_username_for_id($row[4]);
+    $row_USERNAME_q = $this->session->get('TASTY_CONTR_KEY')->get_username_for_id($row[4]);
     
     //echo $row;
     // $comment_row =  mysqli_fetch_assoc($row);
@@ -27,9 +27,9 @@
     // echo $row[3];
     echo '<div class="comment_section">
     <div>';
-    if($this->session->get('CHAT_CONTR_KEY')->get_user_login_status())
+    if($this->session->get('TASTY_CONTR_KEY')->get_user_login_status())
     {
-      if($this->session->get('CHAT_CONTR_KEY')->get_user_id()===$row[4]){
+      if($this->session->get('TASTY_CONTR_KEY')->get_user_id()===$row[4]){
       
         echo'<form action="DeleteComment" method="post">
         <input type="hidden" name="commentId" value="'.$row[0].'">

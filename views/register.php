@@ -1,6 +1,6 @@
 <?php
 #header("Expires: Mon, 26 Jul  05:00:00 GMT");
-header("Cache-Control: max-age=500");
+// header("Cache-Control: max-age=500");
 #header("Pragma: no-cache");
 ?>
 <?php

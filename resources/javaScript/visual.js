@@ -20,7 +20,7 @@ $(document).ready(function () {
         passWord : ko.observable(),
         loggedIn : ko.observable('Login'),
         register : ko.observable(true),
-        randombool : ko.observable(false),
+        commentvisability : ko.observable(false),
         userId : ko.observable(),
         userInfo : ko.observableArray(),
         commentEntered : ko.observable(),
@@ -40,7 +40,7 @@ $(document).ready(function () {
                 $.post("Logout");
                 this.loggedIn("Login");
                 this.register(true);
-                this.randombool(false);
+                this. commentvisability(false);
             }
             else if(mobile)
             {
@@ -60,7 +60,7 @@ $(document).ready(function () {
                 if(viewModel.userInfo()['logedIn']){
                     viewModel.loggedIn("Log Out");
                     viewModel.register(false);
-                    viewModel.randombool(true);
+                    viewModel. commentvisability(true);
                 }
             });
             this.showLoginForm(!this.showLoginForm());
@@ -74,7 +74,7 @@ $(document).ready(function () {
                 if(viewModel.userInfo()['logedIn']){
                     viewModel.loggedIn("Log Out");
                     viewModel.register(false);
-                    viewModel.randombool(true);
+                    viewModel. commentvisability(true);
                 }
             });
             

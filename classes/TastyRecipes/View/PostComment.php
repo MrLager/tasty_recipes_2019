@@ -7,7 +7,7 @@ use Chat\Controller\Controller;
 use Chat\Util\Constants;
 
 /**
- * This class stores the user user name
+ * This class is used to post a comment
  *
  * @author Simon Lagerqvist, simlag@kth.se
  */
@@ -28,7 +28,7 @@ class PostComment extends AbstractRequestHandler {
     protected function doExecute() {
       
         
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
         $comment = $contr->store_comment($this->comment, $this->dishId);
         $this->addVariable('jsonData', $comment);
         // $this->addVariable(Constants::CHAT_USERNAME_VAR, $contr->getUsername());

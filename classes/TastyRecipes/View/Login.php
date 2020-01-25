@@ -23,7 +23,7 @@ function obj2array ( &$Instance ) {
     return $rtn;
 }
 /**
- * This class stores the user user name
+ * This class is used for login
  *
  * @author Simon Lagerqvist, simlag@kth.se
  */
@@ -43,13 +43,13 @@ class Login extends AbstractRequestHandler {
     protected function doExecute() {
       
         
-        $contr = $this->session->get('CHAT_CONTR_KEY');
+        $contr = $this->session->get('TASTY_CONTR_KEY');
         
         if($contr->get_user_login_status())
         {
             $varre = obj2array($contr->get_user());
             $this->addVariable('jsonData', $varre);
-            $this->session->set('CHAT_CONTR_KEY', $contr);
+            $this->session->set('TASTY_CONTR_KEY', $contr);
 
             return 'json-view';
         }
@@ -69,7 +69,7 @@ class Login extends AbstractRequestHandler {
         $vvvv = $contr->login($this->pass);
         $varre = obj2array($vvvv);
         $this->addVariable('jsonData', $varre);
-        $this->session->set('CHAT_CONTR_KEY', $contr);
+        $this->session->set('TASTY_CONTR_KEY', $contr);
 
         return 'json-view';
     }

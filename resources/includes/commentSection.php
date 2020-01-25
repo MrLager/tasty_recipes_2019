@@ -1,5 +1,5 @@
 <script src="../../resources/javaScript/commentSection.js"></script>
-<form id="comment_form" data-bind="visible: randombool, submit: storeComment">
+<form id="comment_form" data-bind="visible: commentvisability, submit: storeComment">
     <input type="text" value="write your comment here!" data-bind="value: commentEntered, valueUpdate: 'afterkeydown'">
     <br>
     <input type="submit" value="submit your comment!">
@@ -20,7 +20,7 @@
       if($this->session->get('CHAT_CONTR_KEY')->get_user_id()===$row[4]){ -->
 
         <form action="DeleteComment" method="post">
-        <button data-bind="click: $parent.deleteComment, visible: $parent.userInfo()['id'] == user_id && $parent.randombool()">delete</button> 
+        <button data-bind="click: $parent.deleteComment, visible: $parent.userInfo()['id'] == user_id && $parent.commentvisability()">delete</button> 
      
         </form> 
 

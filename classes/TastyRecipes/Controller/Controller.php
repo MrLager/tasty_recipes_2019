@@ -85,7 +85,7 @@ class Controller
         for ($x = 0; $x < sizeof($comments); $x++)
         {
             $comments[$x]['user_name'] = $this->loginStore->get_user_name_for_id($comments[$x]['user_id']);
-        //     //solution cant be used since the code will not run if we log in. 
+        //     //solution can't be used since the code will not run if we log in. 
         //     if ($comments[$x]['user_id'] === $this->user->get_user_id())
         //         $comments[$x]['show_delete'] = true;
         //     else
